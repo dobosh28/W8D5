@@ -24,6 +24,13 @@ Function.prototype.myBind = function (context) {
     }
 }
 
+Function.prototype.myBind = function(context, ...args) {
+    let that = this;
+    return function(...call) {
+        return that.apply(context, call);
+    }
+}
+
 const markov = new Cat("Markov");
 const pavlov = new Dog("Pavlov");
 
