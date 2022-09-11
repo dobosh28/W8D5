@@ -27,6 +27,7 @@ Function.prototype.myBind = function (context) {
 const markov = new Cat("Markov");
 const pavlov = new Dog("Pavlov");
 
+
 markov.says("meow", "Ned");
 // Markov says meow to Ned!
 // true
