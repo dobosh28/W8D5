@@ -1,10 +1,10 @@
 Function.prototype.curry = function(numArgs) {
-    let numbers = [];
+    let args = [];
     let that = this;
 
-    function _curriedSum(arg) {
-        numbers.push(arg);
-        if (numbers.length === numArgs) {
+    function _curry(arg) {
+        args.push(arg);
+        if (args.length === numArgs) {
             return that(...arg)
         } else {
             return _curriedSum;

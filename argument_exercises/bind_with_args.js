@@ -24,11 +24,11 @@ Function.prototype.myBind = function (context) {
     }
 }
 
-Function.prototype.myBind = function(context, ...args) {
-    let that = this;
-    return function(...call) {
-        return that.apply(context, call);
-    }
+Function.prototype.myBind = function(context, ...bindArgs) {
+  let that = this;
+  return function(...callArgs) {
+    return that.apply(context, bindArgs.concat(callArgs));
+  }
 }
 
 const markov = new Cat("Markov");

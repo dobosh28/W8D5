@@ -6,9 +6,7 @@ function curriedSum(numArgs) {
 
         if (numbers.length === numArgs) {
             let sum = 0;
-            for (let i = 0; i < numbers.length; i++) {
-                sum += numbers[i];
-            }
+            numbers.forEach(num => sum += num)
             return sum;
         } else {
             return _curriedSum;
